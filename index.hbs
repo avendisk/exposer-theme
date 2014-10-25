@@ -1,0 +1,30 @@
+{{!< default}}
+<header class="exposer_header" {{#if @blog.cover}}style="background-image: url({{@blog.cover}}); background-repeat:no-repeat" {{/if}} role="banner">
+    <section>
+        {{#if @blog.logo}}
+            <a class="blog-logo" href="{{@blog.url}}">
+                <img src="{{@blog.logo}}" alt="Blog Logo"/>
+            </a>
+        {{/if}}
+    </section>
+</header>
+
+<main class="content" role="main">
+    {{#foreach posts}}
+    <article class="{{post_class}}">
+        <header class="exposer_post_header">
+            <hr class="exposer_post_title"><a href="{{url}}">{{title}}</a></h2>
+            <span>{{#if tags}}on {{tags}}{{/if}}</span>
+        </header>
+    </article>
+    <section class="exposer_post_content">
+        {{content words="200"}}
+    </section>
+    <footer class="exposer_post_info">
+        <span class="exposer_date"><time datetime=""{{date format="YYYY-MM-DD"}}>{{date format="YYYY-MM-DD"}}</time></span>
+        <div class="button">
+            <a href="{{url}}">{{{title}}}</a>
+        </div>
+    </footer>
+    {{/foreach}}
+</main>
