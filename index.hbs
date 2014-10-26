@@ -1,9 +1,9 @@
 {{!< default}}
 
-<header class="exposer-header" >
+<header class="pure-u-1-1 exposer-header" >
 <!--{{#if @blog.cover}}style="background-image: url({{@blog.cover}}); background-repeat:no-repeat" {{/if}} role="banner">
 -->
-    <sup id="header-super-the">The</sup>Exposer
+    <h1 class="exposer-title"><sup id="exposer-title-superscript">The</sup>Exposer</h1>
     <section>
         {{#if @blog.logo}}
             <a class="blog-logo pure-img" href="{{@blog.url}}">
@@ -13,7 +13,17 @@
     </section>
 </header>
 
-<main class="content pure-g" role="main">
+<nav>
+<!--we need to add more pure tags so it does adequate resizing for small screens-->
+<a class="nav-item pure-u-1-5" href="#">Home</a>
+<a class="nav-item pure-u-1-5" href="#">Technology</a>
+<a class="nav-item pure-u-1-5" href="#">Humor</a>
+<a class="nav-item pure-u-1-5" href="#">Rangs</a>
+<a class="nav-item pure-u-1-5" href="#">Other</a>
+</nav>
+
+
+<main class="content" role="main">
     {{#foreach posts}}
     {{#if @first}}
          <article class="exposer-post {{post-class}} pure-u-1-1">
@@ -42,6 +52,9 @@
     </article>
    {{/foreach}}
 </main>
+
+
+
 <footer class="main-footer">
     Is the exposer copyrighted as of 4 years ago? like 2010 or something? yea. 2010. This is a footer. Which is a semantic tag I haven't used in a while. I should html more often.
 </footer>
