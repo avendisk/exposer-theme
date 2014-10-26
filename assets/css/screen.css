@@ -2,13 +2,13 @@ a{
     text-decoration:none;
     color:black;
 }
-main > .exposer-post{
+/*main > .exposer-post{
     /*add this so padding/margins don't break columns on posts 
-    still broken though, but this helps*/
+    still broken though, but this helps
     -webkit-box-sizing: border-box;
     -mox-box-sizing:border-box;
     box-sizing:border-box;
-}
+}*/
 .main-footer{
     width:50%;
     margin:300px auto 150px;
@@ -47,8 +47,13 @@ main > .exposer-post{
     margin-bottom:0;
 }
 .exposer-post{
-    padding:0 20px;
+     /*add this so padding/margins don't break columns on posts 
+    still broken though, but this helps*/
    /* font-family:Buenard, serif;*/
+    -webkit-box-sizing: border-box;
+    -mox-box-sizing:border-box;
+    box-sizing:border-box;
+    padding:0 20px;
 }
 /* pure wants us to do the fonts like this, i don't know why... */
 
