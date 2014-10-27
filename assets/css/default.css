@@ -18,20 +18,20 @@ perhaps they should be in separate stylesheets for the homepage and post pages*/
     font-size:2em;
 }
 
-.exposer-header{
+.global-header{
     margin:20px 0;
     text-align:center;
     /*font-size:10em;*/
     color:black;
     text-transform:uppercase;
 }
-.exposer-title{
+.global-title{
     font-weight:normal;
     font-family:'Open Sans Condensed', sans-serif;
     font-size:10em;
     margin:0;
 }
-#exposer-title-superscript{
+#global-title-superscript{
     font-size:0.3em;
     vertical-align:super;
 }
@@ -44,7 +44,7 @@ perhaps they should be in separate stylesheets for the homepage and post pages*/
 
 
 
-.exposer-post{
+.post{
      /*add this so padding/margins don't break columns on posts 
     still broken though, but this helps*/
     -webkit-box-sizing: border-box;
@@ -52,7 +52,7 @@ perhaps they should be in separate stylesheets for the homepage and post pages*/
     box-sizing:border-box;
     padding:0 20px;
 }
-.exposer-post-title{
+.post-title{
     text-decoration:none;
     font-family:'Open Sans Condensed';
     font-size:4em;
@@ -60,11 +60,11 @@ perhaps they should be in separate stylesheets for the homepage and post pages*/
     color:black;
     margin-bottom:0;
 }
-.exposer-post-content h1,h2,h3{
+.post-content h1,h2,h3{
     font-family:'Open Sans Condensed', sans-serif;
 }
-.exposer-post-content, .exposer-post-footer{
-    font-family:Buenard, serif;
+.post-content, .post-footer{
+    font-family:Buenard, serif !important;
 }
 
 

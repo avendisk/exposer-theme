@@ -1,87 +1,9 @@
-a{
-    text-decoration:none;
-    color:black;
-}
-nav{
-    text-align:center;
-    font-family:'Open Sans Condensed',sans-serif;
-}
+
 /*home-template and post-template are the values of the handlebars body_class variable
 perhaps they should be in separate stylesheets for the homepage and post pages*/
 .home-template, .post-template{
-    width:980px;
+    max-width:980px;
     margin-left:auto;
     margin-right:auto;
 }
-.nav-item[class *="pure-u"] {
-    font-family:'Open Sans Condensed',sans-serif;
-    font-size:2em;
-}
-
-.exposer-header{
-    margin:20px 0;
-    text-align:center;
-    /*font-size:10em;*/
-    color:black;
-    text-transform:uppercase;
-}
-.exposer-title{
-    font-weight:normal;
-    font-family:'Open Sans Condensed', sans-serif;
-    font-size:10em;
-    margin:0;
-}
-#exposer-title-superscript{
-    font-size:0.3em;
-    vertical-align:super;
-}
-.main-footer{
-    width:50%;
-    margin:300px auto 150px;
-    font-size:1em;    
-}
-
-
-
-
-.exposer-post{
-     /*add this so padding/margins don't break columns on posts 
-    still broken though, but this helps*/
-    -webkit-box-sizing: border-box;
-    -mox-box-sizing:border-box;
-    box-sizing:border-box;
-    padding:0 20px;
-}
-.exposer-post-title{
-    text-decoration:none;
-    font-family:'Open Sans Condensed';
-    font-size:4em;
-    font-weight:normal;
-    color:black;
-    margin-bottom:0;
-}
-.exposer-post-content h1,h2,h3{
-    font-family:'Open Sans Condensed', sans-serif;
-}
-.exposer-post-content, .exposer-post-footer{
-    font-family:Buenard, serif;
-}
-
-
-
-
-
-/* pure wants us to do the fonts like this, i don't know why... */
-
-*/*html, button,input,select,textarea,
-.pure-g [class *= "pure-u"]{
-    font-family:Buenard, serif;
-}/
-/*main > .exposer-post{
-    /*add this so padding/margins don't break columns on posts 
-    still broken though, but this helps
-    -webkit-box-sizing: border-box;
-    -mox-box-sizing:border-box;
-    box-sizing:border-box;
-}*/
 

@@ -1,10 +1,10 @@
 {{!< default}}
 
 
-<header class="exposer-header pure-u-1-1" >
+<header class="global-header pure-u-1-1" >
 <!--{{#if @blog.cover}}style="background-image: url({{@blog.cover}}); background-repeat:no-repeat" {{/if}} role="banner">
 -->
-    <h1 class="exposer-title"><sup id="exposer-title-superscript">The</sup>Exposer</h1>
+    <h1 class="global-title"><sup id="global-title-superscript">The</sup>Exposer</h1>
     <section>
         {{#if @blog.logo}}
             <a class="blog-logo pure-img" href="{{@blog.url}}">
@@ -16,25 +16,25 @@
 
 
 {{#post}}
-<main class="content exposer-post" role="main">
-    <header class="exposer-post-header">
-        <h2 class="exposer-post-title"><a href="{{url}}">{{title}}</a></h2>
+<main class="content post pure-u-1" role="main">
+    <header class="post-header">
+        <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
         <span>{{#if tags}}on {{tags}}{{/if}}</span>
     </header>
 
-    <section class="exposer-post-content pure-u-1-1">
+    <section class="post-content">
         {{content}}
     </section>
 
-    <footer class="exposer-post-footer">
-        <span class="exposer-date"><time datetime=""{{date published_at format="YYYY-MM-DD"}}>{{date published_at format="YYYY-MM-DD"}}</time></span>
+    <footer class="post-footer">
+        <span class="date"><time datetime=""{{date published_at format="YYYY-MM-DD"}}>{{date published_at format="YYYY-MM-DD"}}</time></span>
         <div class="button">
             <a href="{{url}}">Read More</a>
         </div>
     </footer>
 </main>
 {{/post}}
-<footer class="main-footer">
+<footer class="global-footer pure-u-1">
     {{ghost_foot}}
 </footer>
 
