@@ -1,40 +1,38 @@
 {{!< default}}
 
-
-<header class="global-header pure-u-1-1" >
-<!--{{#if @blog.cover}}style="background-image: url({{@blog.cover}}); background-repeat:no-repeat" {{/if}} role="banner">
--->
-    <h1 class="global-title"><sup id="global-title-superscript">The</sup>Exposer</h1>
-    <section>
-        {{#if @blog.logo}}
-            <a class="blog-logo pure-img" href="{{@blog.url}}">
-                <img src="{{@blog.logo}}" alt="Blog Logo"/>
-            </a>
-        {{/if}}
-    </section>
-</header>
-
-
 {{#post}}
-<main class="content post pure-u-1" role="main">
-    <header class="post-header">
-        <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
-        <span>{{#if tags}}on {{tags}}{{/if}}</span>
-    </header>
+<main class="content post" role="main">
+    <div>
+    <article class="pure-u-4-5">
+        <header class="post-header">
+            <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
+            {{#if tags}}<span> {{tags}}</span>{{/if}}
+        </header>
 
-    <section class="post-content">
-        {{content}}
-    </section>
-
-    <footer class="post-footer">
-        <span class="date"><time datetime=""{{date published_at format="YYYY-MM-DD"}}>{{date published_at format="YYYY-MM-DD"}}</time></span>
-        <div class="button">
-            <a href="{{url}}">Read More</a>
-        </div>
-    </footer>
+        <section class="post-content">
+            {{content}}
+        </section>
+        
+        <footer class="post-footer">
+            <span class="date"><time datetime=""{{date published_at format="YYYY-MM-DD"}}>
+                {{date published_at format="YYYY-MM-DD"}}
+            </time></span>
+            <div class="button">
+                <a href="{{url}}">Read More</a>
+            </div>
+        </footer>
+    </article>
+    <aside class="author-aside pure-u-1-5">
+        {{#author}}
+            <a href="{{url}}">
+            <img class="author-img" src="{{image}}" alt="exposer team icon" title="the Exposer Team"/>
+            </a>            
+            <a href="{{url}}"><h3 class="author-name">{{name}}</h3></a>
+            <section>{{bio}}</section> 
+            <!-- {{website}} -->
+            <!--{{cover}}-->
+        {{/author}}
+    </aside>
+    </div>
 </main>
 {{/post}}
-<footer class="global-footer pure-u-1">
-    {{ghost_foot}}
-</footer>
-

@@ -25,8 +25,14 @@
     <link href="http://fonts.googleapis.com/css?family=Buenard:400,700" rel="stylesheet" type="type/css"/>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet" type="type/css"/>
     
+
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
+    <script type="text/javascript" >
+    Handlebars.registerHelper("checkIter", function(index, num){
+        return (index==num);
+    });    
+    </script>
 </head>
 
 <body class="{{body_class}} pure-g">
@@ -48,10 +54,10 @@
 
     <nav> 
     <!--we need to add more pure tags so it does adequate resizing for small screens-->
-    <a class="nav-item pure-u-1-5" href="#">Home</a>
-    <a class="nav-item pure-u-1-5" href="#">Technology</a>
-    <a class="nav-item pure-u-1-5" href="#">Humor</a>
-    <a class="nav-item pure-u-1-5" href="#">Rangs</a>
+    <a class="nav-item pure-u-1-5" href="/">Home</a>
+    <a class="nav-item pure-u-1-5" href="/tag/technology">Technology</a>
+    <a class="nav-item pure-u-1-5" href="/tag/humor">Humor</a>
+    <a class="nav-item pure-u-1-5" href="/tag/rangs">Rangs</a>
     <a class="nav-item pure-u-1-5" href="#">Other</a>
     </nav>
 
@@ -59,7 +65,11 @@
 
     <!-- end weird nav helper div -->
     </div>
-
+    
+    <footer class="global-footer pure-u-1">
+        Is the exposer copyrighted as of 4 years ago? like 2010 or something? yea. 2010. This is a footer. 
+        Which is a semantic tag I haven't used in a while. I should html more often.
+    </footer>
     {{ghost_foot}}
 </body>
 </html>

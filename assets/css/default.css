@@ -8,7 +8,7 @@ nav{
 }
 /*home-template and post-template are the values of the handlebars body_class variable
 perhaps they should be in separate stylesheets for the homepage and post pages*/
-.home-template, .post-template{
+.home-template, .post-template, .tag-template{
     max-width:980px;
     margin-left:auto;
     margin-right:auto;
@@ -35,22 +35,25 @@ perhaps they should be in separate stylesheets for the homepage and post pages*/
     font-size:0.3em;
     vertical-align:super;
 }
-.main-footer{
+.global-footer{
+    width:50%;
     text-align:center;
     margin:200px auto ;
     font-size:1em;    
+    font-family:'Buenard', serif !important;
 }
 
 
 
 
-.post{
+.post, .post-content, .author-aside{
      /*add this so padding/margins don't break columns on posts 
     still broken though, but this helps*/
     -webkit-box-sizing: border-box;
     -mox-box-sizing:border-box;
     box-sizing:border-box;
-    padding:0 20px;
+    padding: 0 10px;
+    font-family:Buenard, serif !important;
 }
 .post-title{
     text-decoration:none;
@@ -60,15 +63,64 @@ perhaps they should be in separate stylesheets for the homepage and post pages*/
     color:black;
     margin-bottom:0;
 }
+.post-subtitle{
+    color:gray;
+    font-size:0.8em;
+}
+
+.post-author{
+    font-family:'Open Sans Condensed', sans-serif;
+    font-size:1.4em;
+}
 .post-content h1,h2,h3{
     font-family:'Open Sans Condensed', sans-serif;
 }
 .post-content, .post-footer{
     font-family:Buenard, serif !important;
 }
+.post-footer{
+    font-weight:bold;
+}
+
+.exposer-post-tag{
+   /* background:rgba(200,200,200,0.5);
+    border:1px solid #000;
+    border-radius:2px;
+    padding:1px 4px;
+    margin-top:10px;
+    font-size:0.82em;*/
+    font-family:'Open Sans Condensed', sans-serif !important;
+    text-transform:lowercase;
+    /*display:inline-block;*/
+}
 
 
 
+
+
+
+/* this may move to a different css file */
+.author-aside{
+    border-left:1px solid gray;
+    margin-top: 100px;
+    font-family:Buenard, serif !important;
+    padding-bottom:100px;
+    padding-left: 20px;
+}
+.author-name{
+    text-align:center;
+}
+.author-img{
+    top:3px;
+    right:3px;
+    bottom:3px;
+    left:3px;
+    border-radius:100%;
+    border:#333 solid 2px;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
 
 
 /* pure wants us to do the fonts like this, i don't know why... */
