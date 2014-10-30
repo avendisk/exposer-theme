@@ -1,0 +1,25 @@
+        <header class="post-header">
+            <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
+        <div class="post-subtitle">
+            posted by 
+            <span class="post-author">{{author}}</span>
+            <div> 
+            <div class="date">
+                <time datetime=""{{date format="YYYY-MM-DD"}}>
+                    {{date format="YYYY-MM-DD"}}
+                </time>
+           
+<!--            {{#if tags}}<span class="exposer-post-tag">| {{tags}}</span>{{/if}}-->
+            </div>
+        </header>
+
+        <section class="post-content">
+            {{content words="100"}}
+        </section>
+
+        <footer class="post-footer">
+            <div class="button">
+                <a href="{{url}}">Read More</a>
+            </div>
+        </footer>
+ 

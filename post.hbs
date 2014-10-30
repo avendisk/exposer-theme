@@ -1,26 +1,33 @@
 {{!< default}}
+<script type="text/javascript" src="/assets/js/citationhelper.js"></script>
 
 {{#post}}
-<main class="content post" role="main">
+<main class="content" role="main">
     <div>
-    <article class="pure-u-4-5">
+    <article class="post pure-u-4-5">
         <header class="post-header">
             <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
-            {{#if tags}}<span> {{tags}}</span>{{/if}}
+            <div class="post-subtitle">
+                posted by 
+                <span class="post-author">{{author}}</span>
+                <div> 
+                <span class="date">
+                    <time datetime=""{{date format="YYYY-MM-DD"}}>
+                        {{date format="YYYY-MM-DD"}}
+                    </time>
+
+                {{#if tags}}in <span class="exposer-post-tag">{{tags}}</span>{{/if}}
+            </div>
         </header>
+
+
+
 
         <section class="post-content">
             {{content}}
         </section>
         
-        <footer class="post-footer">
-            <span class="date"><time datetime=""{{date published_at format="YYYY-MM-DD"}}>
-                {{date published_at format="YYYY-MM-DD"}}
-            </time></span>
-            <div class="button">
-                <a href="{{url}}">Read More</a>
-            </div>
-        </footer>
+        <!-- if we had a footer it would go here maybe citations? -->
     </article>
     <aside class="author-aside pure-u-1-5">
         {{#author}}

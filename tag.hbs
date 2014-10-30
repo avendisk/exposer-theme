@@ -1,0 +1,16 @@
+{{!< default}}
+
+<main class="content" role="main">
+    {{#if posts}}
+    {{#foreach posts}}
+        <article class="post {{post-class}} pure-u-1">
+            {{> post-list}}
+        </article>
+    {{/foreach}}
+    {{else}}
+        <!-- this is never seen because ghost has its own error handling for this-->
+        <h2>There is currently no content for this section. Hopefully some will be available soon!</h2>
+    {{/if}}
+</main>
+
+
