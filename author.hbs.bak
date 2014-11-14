@@ -1,46 +1,6 @@
 {{!< default}}
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript">
-
-google.load("feeds","1");
-
-function initialize(){
-    var feed=new google.feeds.Feed("http://mattthinkshesasysadmin.blogspot.com/feeds/posts/default");
-    feed.load(function(result){
-        if(!result.error)
-        {
-            console.log("no error");
-            var container = document.getElementById("author-rss");
-            for(var i=0;i<result.feed.entries.length;i++)
-            {
-                console.log("entry "+JSON.stringify(entry));
-                var entry=result.feed.entries[i];
-                var article= document.createElement("article");
-                var link = document.createElement("a");
-                $(link).attr("href", entry.link);
-                var title = document.createElement("h3");
-                $(title).html(entry.title);
-                $(link).append(title);
-                $(article).html(link);
-                var summary = document.createElement("div");
-                $(summary).html(entry.contentSnippet);
-                $(article).append(summary);
-                /*var content = document.createElement("content");
-                $(content).html(entry.content);
-                $(content).text($(content).text().substr(0,500)+"...");
-                $(article).append(content);*/
-                container.appendChild(article);
-            }
-        }
-        else{
-            console.log(result.error);
-        }
-
-    });
-
-}
-google.setOnLoadCallback(initialize);
-/*window.onload = function(){
+window.onload = function(){
     var script = document.createElement("script");
     console.log("after onload");
     script.type = "text/javascript";
@@ -49,7 +9,7 @@ google.setOnLoadCallback(initialize);
     script.onreadystatechange = jFeedLoaded();
     script.onload = jFeedLoaded();
     document.head.appendChild(script);
-}*/
+}
 
 function jFeedLoaded(){
     console.log("called jfeed loaded");
@@ -111,7 +71,6 @@ function jFeedLoaded(){
         {{/author}}
     </section>
     <section id="author-rss">
-        <h2>{{author.name}}'s Offsite Feed</h2>
     </section>
     {{#foreach posts}}
         <article class="post {{post-class}} pure-u-1">

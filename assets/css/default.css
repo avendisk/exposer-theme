@@ -21,8 +21,31 @@ perhaps they should be in separate stylesheets for the homepage and post pages*/
 }
 .nav-item[class *="pure-u"] {
     font-family:'Open Sans Condensed',sans-serif;
+    -webkit-box-sizing: border-box;
+    -mox-box-sizing:border-box;
+    box-sizing:border-box;
     font-size:2em;
 }
+.border-box{
+    -webkit-box-sizing: border-box;
+    -mox-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.center-text{
+    text-align:center;
+}
+
+#major-nav{
+}
+#minor-nav{
+    border-top:1px solid #CCC;
+    font-size:0.65em;
+    padding-top: 1em;
+    margin-top:1em;
+    margin-left:12em;
+    margin-right:12em;
+}
+
 
 .global-header{
     margin:20px 0;
@@ -86,7 +109,7 @@ perhaps they should be in separate stylesheets for the homepage and post pages*/
     font-size:1.2em;
     font-weight:bold;
 }
-.post-content h1,h2,h3{
+.post-content h1,h2,h3,h4{
     font-family:'Open Sans Condensed', sans-serif;
 }
 .post-content{

@@ -3,21 +3,8 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
 {{#post}}
 <main class="content" role="main">
-    <div>
     <article class="post pure-u-4-5">
         <header class="post-header">
-            <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
-            <div class="post-subtitle">
-                posted by 
-                <span class="post-author">{{author}}</span>
-                <div> 
-                <span class="date">
-                    <time datetime=""{{date format="YYYY-MM-DD"}}>
-                        {{date format="YYYY-MM-DD"}}
-                    </time>
-
-                {{#if tags}}in <span class="exposer-post-tag">{{tags}}</span>{{/if}}
-            </div>
         </header>
 
 
@@ -40,6 +27,5 @@
             <!--{{cover}}-->
         {{/author}}
     </aside>
-    </div>
 </main>
 {{/post}}

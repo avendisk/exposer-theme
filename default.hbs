@@ -17,7 +17,7 @@
     {{! Styles and Scripts }}
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css"/>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css"/>
-    <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="/assets/css/normalize.css"/>-->
     <!--<link rel="stylesheet" type="text/css" href="/assets/css/home.css"/>-->
     <link rel="stylesheet" type="text/css" href="/assets/css/screen.css"/>
     <link href="http://fonts.googleapis.com/css?family=Raleway:400,500,600,800" rel="stylesheet" type="type/css"/>
@@ -51,11 +51,19 @@
 
     <nav> 
     <!--we need to add more pure tags so it does adequate resizing for small screens-->
-    <a class="nav-item pure-u-1-5" href="/">Home</a>
-    <a class="nav-item pure-u-1-5" href="/tag/technology">Technology</a>
-    <a class="nav-item pure-u-1-5" href="/tag/humor">Humor</a>
-    <a class="nav-item pure-u-1-5" href="/tag/rangs">Rangs</a>
-    <a class="nav-item pure-u-1-5" href="#">Other</a>
+    <div id="major-nav"> 
+        <a class="nav-item pure-u-1-3 pure-u-md-1-5" href="/">Home</a>
+        <a class="nav-item pure-u-1-3 pure-u-md-1-5" href="/tag/news">News</a>
+        <a class="nav-item pure-u-1-3 pure-u-md-1-5" href="/tag/technology">Technology</a>
+        <a class="nav-item pure-u-1-2 pure-u-md-1-5" href="/tag/editorial">Editorial</a>
+        <a class="nav-item pure-u-1-2 pure-u-md-1-5" href="/data">Data</a>
+    </div>
+    <div id="minor-nav">
+        <a class="nav-item pure-u-1-3 pure-u-md-1-4" href="/tag/rangs">Rangs</a>
+        <a class="nav-item pure-u-1-3 pure-u-md-1-4" href="/tag/humor">Humor</a>
+        <a class="nav-item pure-u-1-3 pure-u-md-1-4" href="/other">Other</a>
+        <a class="nav-item pure-u-1-1 pure-u-md-1-4" href="/about">About</a>
+    </div>
     </nav>
 
     {{{body}}}

@@ -15,6 +15,7 @@ window.onload = function(){
        
         $(newLink).attr("href","#"+$(this).attr("id"));
         
+        //add a superscript with the link to the citation back in the article        
         var newSup = document.createElement("sup");
         $(newSup).html("["+citationNum+"]");
         footCitation.prepend($(newLink).html(newSup));
