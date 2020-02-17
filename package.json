@@ -1,4 +1,14 @@
 {
   "name": "exposer-theme",
-  "version": "0.3.0"
+  "description": "The theme for The Exposer, an online publication",
+  "version": "0.3.0",
+  "keywords":[
+    "ghost-theme"
+  ],
+  "engines":{
+    "ghost-api":"v3"
+  },
+  "author":{
+    "email":"admin@theexposer.org"
+  }
 }
