@@ -12,5 +12,31 @@
 .post-content a{
     text-decoration:underline;
 }
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-post{
+    flex:70%;
+/*  we set this min-width to make sure <pre> doesn't overflow */
+    min-width:0;
+/*    flex:0 0 800px;*/
+    /*max-width:80%*/
+}
+.flex-aside{
+    flex:15%;
+}
+/*images and pre tags will bust out of the flex-box
+    here's how we fix it*/
+/* pre needs its overflow changed and its parent
+    flex item needs to have a min-width set*/
+pre{
 
-
+    /*max-width:100;*/
+    overflow-x:auto;
+    background:#eee;
+}
+/*img just needs a max-width of its parent to prevent overflow */
+img{
+    max-width:100%;
+}
