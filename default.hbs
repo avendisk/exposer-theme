@@ -7,7 +7,6 @@
 
     {{! Page Meta }}
     <title>{{meta_title}}</title>
-    <meta name="description" content="{{meta_description}}"/>
 
     {{! Responsive Meta Tags }}
     <meta name="HandheldFriendly" content="True"/>
@@ -41,9 +40,9 @@
     -->
         <h1 class="global-title"><sup id="global-title-superscript">The</sup>Exposer</h1>
         <section>
-            {{#if @blog.logo}}
-                <a class="blog-logo pure-img" href="{{@blog.url}}">
-                    <img src="{{@blog.logo}}" alt="Blog Logo"/>
+            {{#if @site.logo}}
+                <a class="blog-logo pure-img" href="{{@site.url}}">
+                    <img src="{{@site.logo}}" alt="Blog Logo"/>
                 </a>
             {{/if}}
         </section>
