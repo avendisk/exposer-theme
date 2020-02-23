@@ -1,12 +1,12 @@
 {{!< default}}
-<link rel="stylesheet" type="text/css" href="/assets/css/about.css"/>
+<link rel="stylesheet" type="text/css" href="{{asset 'css/about.css'}}"/>
 {{#post}}
 <main class="content pure-u-1" role="main">
     <div>
     <article class="post">
         <header class="post-header">
-            <a href="{{author.url}}">
-                <img class="author-img" src="{{author.image}}" alt="photo of {{author.name}}" title="{{author.name}}"/>
+            <a href="{{primary_author.url}}">
+                <img class="author-img" src="{{primary_author.profile_image}}" alt="photo of {{primary_author.name}}" title="{{primary_author.name}}"/>
                 <h3 class="post-title">{{title}}</h3>
             </a>
         </header>

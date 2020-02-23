@@ -1,6 +1,6 @@
 {{!< default}}
-<script type="text/javascript" src="/assets/js/citationhelper.js"></script>
-<link rel="stylesheet" type="text/css" href="/assets/css/post.css"/>
+<script type="text/javascript" src="{{asset 'js/citationhelper.js'}}"></script>
+<link rel="stylesheet" type="text/css" href="{{asset 'css/post.css'}}"/>
 {{#post}}
 <main class="content" role="main">
     <div>
@@ -9,7 +9,7 @@
             <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
             <div class="post-subtitle">
                 posted by 
-                <span class="post-author">{{author}}</span>
+                <span class="post-author">{{authors}}</span>
                 <div> 
                 <span class="date">
                     <time datetime=""{{date format="YYYY-MM-DD"}}>
@@ -30,15 +30,15 @@
         <!-- if we had a footer it would go here maybe citations? -->
     </article>
     <aside class="author-aside pure-u-1-5">
-        {{#author}}
+        {{#primary_author}}
             <a href="{{url}}">
-            <img class="author-img" src="{{image}}" alt="exposer team icon" title="the Exposer Team"/>
+            <img class="author-img" src="{{image_url}}" alt="exposer team icon" title="the Exposer Team"/>
             </a>            
             <a href="{{url}}"><h3 class="author-name">{{name}}</h3></a>
             <section>{{bio}}</section> 
             <!-- {{website}} -->
-            <!--{{cover}}-->
-        {{/author}}
+            <!--{{cover_image}}-->
+        {{/primary_author}}
     </aside>
     </div>
 </main>
